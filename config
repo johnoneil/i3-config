@@ -27,6 +27,11 @@ new_window pixel
 #get the mouse out of the way with unclutter
 exec unclutter
 
+#mount our network drives
+exec "sshfs joneil@192.168.1.140:/media/sata/incoming ~/incoming"
+exec "sshfs joneil@192.168.1.140:/media/sata/pictures ~/Pictures"
+
+
 
 ###########################################################################
 ###################  I 3  G A P S  N E X T   ##############################
@@ -39,10 +44,10 @@ exec unclutter
 # want it
 
 for_window [class="^.*"] border pixel 2
-gaps inner 15
+gaps inner 12
 gaps outer 2
-smart_gaps on
-smart_borders on
+#smart_gaps on
+#smart_borders on
 
 
 set $mod Mod4
@@ -240,9 +245,9 @@ exec cinnamon-sound-applet
  }
 
 client.background       #242424 #242424 #242424
-#client.focused          #4A4A4A #4A4A4A #e5e5e5 #ff0000
-client.focused          #ff0000 #ff0000 #e5e5e5 #ff0000
-client.unfocused        #222222 #222222 #aaaaaa #ff0000
-client.focused_inactive #ff0000 #222222 #a9a9a9 #ff0000
-client.urgent           #4A4A4A #4A4A4A #f7f7f7 #ff0000
+#client.focused          #4A4A4A #4A4A4A #e5e5e5 #ffff00
+client.focused          #ff000 #ff0000 #e5e5e5 #ffff00
+client.unfocused        #222222 #222222 #aaaaaa #ffff00
+client.focused_inactive #ffff00 #222222 #a9a9a9 #ffff00
+client.urgent           #4A4A4A #4A4A4A #f7f7f7 #ffff00
 

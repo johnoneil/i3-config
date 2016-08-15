@@ -31,6 +31,9 @@ exec unclutter
 exec "sshfs joneil@192.168.1.140:/media/sata/incoming ~/incoming"
 exec "sshfs joneil@192.168.1.140:/media/sata/pictures ~/Pictures"
 
+#start chromium in right window
+exec --no-startup-id i3-msg 'workspace 1; exec chromium-browser'
+exec --no-startup-id i3-msg 'workspace 2; exec i3-sensible-terminal'
 
 
 ###########################################################################
@@ -198,6 +201,7 @@ mode "resize" {
         # back to normal: Enter or Escape
         bindsym Return mode "default"
         bindsym Escape mode "default"
+        #bindsym e mode "default"
 }
 
 bindsym $mod+r mode "resize"
